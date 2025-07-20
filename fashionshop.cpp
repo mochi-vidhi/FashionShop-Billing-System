@@ -13,8 +13,8 @@ class GarmentShop{
          cout<<"Enter the password...";
          cin>>pass;
         try{
-           if(strlen(u_name)<5&&strcmp(u_name,"user")==0){
-           if(strlen(pass)<10&&strcmp(pass,"sys123")==0){
+           if(strcmp(u_name,"user")==0){
+           if(strcmp(pass,"sys123")==0){
            cout<<"\t\tWelcome...."<<endl;
           }
           else{
