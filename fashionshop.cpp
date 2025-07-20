@@ -7,7 +7,7 @@ class GarmentShop{
     public:
     void login(){
           char u_name[5],pass[7];
-         cout<<"User Name : user  && password : "sys123"<<endl;
+         cout<<"User Name : user  && password : sys123"<<endl;
          cout<<"Enter the user name.......";
          cin>>u_name;
          cout<<"Enter the password...";
