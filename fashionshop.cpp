@@ -8,32 +8,29 @@ class GarmentShop{
     void login(){
           char u_name[5],pass[7];
          cout<<"User Name : user  && password : sys123"<<endl;
-        while(true){
-         cout<<"Enter the user name.......";
-         cin>>u_name;
-         cout<<"Enter the password...";
-         cin>>pass;
-        try{
-           if(strcmp(u_name,"user")==0){
-           if(strcmp(pass,"sys123")==0){
-           cout<<"\t\tWelcome...."<<endl;
-           break;
-          }
-          else{
-           throw std::runtime_error("Password is wrong..");
-           
-          }
+        while (true) {
+        cout << "Enter the user name: ";
+        cin >> u_name;
+        cout << "Enter the password: ";
+        cin >> pass;
+
+        try {
+            if (strcmp(u_name, "user") == 0) {
+                if (strcmp(pass, "sys123") == 0) {
+                    cout << "\n\t\t Welcome, Login Successful!\n";
+                    break;  // Exit the loop on successful login
+                } else {
+                    throw std::runtime_error(" Password is incorrect.\n");
+                }
+            } else {
+                throw std::runtime_error(" Username is incorrect.\n");
+            }
         }
-        else{
-         throw std::runtime_error("Username is wrong..");
-          
+        catch (const std::runtime_error &e) {
+            cout << e.what();
+            cout << "Please try again.\n\n";
         }
-        }
-        catch(const std::runtime_error&e){
-          cout<<e.what()<<endl;
-          cout << "Please try again.\n\n";
-        }
-      }
+    }
     }
     void  detailsAbout(){
         cout<<"\t\t<<<-------------Fashion Junction---------------->>>\t\t"<<endl;
