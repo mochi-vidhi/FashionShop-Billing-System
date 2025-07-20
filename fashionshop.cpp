@@ -8,6 +8,7 @@ class GarmentShop{
     void login(){
           char u_name[5],pass[7];
          cout<<"User Name : user  && password : sys123"<<endl;
+        while(true){
          cout<<"Enter the user name.......";
          cin>>u_name;
          cout<<"Enter the password...";
@@ -16,6 +17,7 @@ class GarmentShop{
            if(strcmp(u_name,"user")==0){
            if(strcmp(pass,"sys123")==0){
            cout<<"\t\tWelcome...."<<endl;
+           break;
           }
           else{
            throw std::runtime_error("Password is wrong..");
@@ -28,11 +30,10 @@ class GarmentShop{
         }
         }catch(std::length_error&e){
           cout<<e.what()<<endl;
-          exit(0);
-        }catch(...){
-       cout<<"Defualt catch"<<endl;
-       }
+          cout << "Please try again.\n\n";
+        }
       }
+    }
     void  detailsAbout(){
         cout<<"\t\t<<<-------------Fashion Junction---------------->>>\t\t"<<endl;
         cout<<"Address:-Anand Vidhyanagar Road, Anand - 388001"<<endl;
