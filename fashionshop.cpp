@@ -28,7 +28,8 @@ class GarmentShop{
          throw std::runtime_error("Username is wrong..");
           
         }
-        }catch(std::length_error&e){
+        }
+        catch(const std::runtime_error&e){
           cout<<e.what()<<endl;
           cout << "Please try again.\n\n";
         }
