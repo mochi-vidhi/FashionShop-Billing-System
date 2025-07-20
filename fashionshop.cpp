@@ -18,12 +18,12 @@ class GarmentShop{
            cout<<"\t\tWelcome...."<<endl;
           }
           else{
-           throw std::length_error("Password is wrong..");
+           throw std::runtime_error("Password is wrong..");
            
           }
         }
         else{
-         throw std::length_error("Username is wrong..");
+         throw std::runtime_error("Username is wrong..");
           
         }
         }catch(std::length_error&e){
